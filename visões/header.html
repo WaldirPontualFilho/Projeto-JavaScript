@@ -1,0 +1,43 @@
+<header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Página Inicial</a></li>
+            <li><a href="admin.html">Área Administrativa</a></li>
+            <li><a href="contato.html">Contato</a></li>
+            <li><a href="mensagens.html">Mensagens Recebidas</a></li>
+        </ul>
+    </nav>
+</header>
+
+<style>
+    header {        
+        color: rgb(1, 1, 1);
+        text-align: center;
+        padding: 11px;
+    }
+
+    nav ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+    }
+
+    nav ul li {
+        display: inline;
+        margin-right: 11px;
+    }
+
+    nav ul li a {
+        text-decoration: none;
+        color: rgb(17, 16, 16);
+        font-size: 17px;
+        font-weight: bold;
+    }
+
+    nav ul li:not(:last-child) {
+        border-right: 1px solid silver;
+        padding-right: 10px;
+    }
+</style>

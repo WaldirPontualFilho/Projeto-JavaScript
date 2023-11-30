@@ -1,0 +1,64 @@
+<!-- mensagens.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Mensagens Recebidas</title>    
+</head>
+<body>
+    <!-- Div para inserir o conteúdo do cabeçalho -->
+    <div id="headerContent"></div>
+
+    <!-- Conteúdo da Página de Mensagens -->
+    <h1>Mensagens Recebidas</h1>
+   
+    <!-- Tabela para exibir mensagens -->
+    <table id="mensagensApi">
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>Email</th>
+                <th>Mensagem</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- As mensagens serão exibidas aqui -->
+        </tbody>
+    </table>
+
+    <script src="../js/jquery-3.6.4.min.js"></script>   
+    <script src="../js/api.js"></script>
+    <script src="../js/scripts.js"></script>
+
+    <script>
+        // Chama a função para carregar o cabeçalho + mensagens
+        window.onload = function () {
+            loadHeader(); // carrega o header           
+            carregarMensagens();  // Carrega as mensagens existentes importadas da API
+        };
+
+        // Função para carregar as mensagens existentes
+        function carregarMensagens() {
+            var mensagens = obterMensagens();
+            var tbody = document.querySelector("#mensagensApi tbody");
+            
+            // Limpa o conteúdo atual da tabela
+            tbody.innerHTML = "";
+
+            // Adiciona as mensagens à tabela
+            mensagens.forEach(function (mensagem) {
+                var tr = document.createElement("tr");
+                tr.innerHTML = `
+                    <td>${mensagem.nome}</td>
+                    <td>${mensagem.email}</td>
+                    <td>${mensagem.mensagem}</td>
+                `;
+                tbody.appendChild(tr);
+            });
+        }
+    </script>
+</body>
+</html>

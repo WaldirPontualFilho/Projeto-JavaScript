@@ -1,0 +1,65 @@
+<!-- admin.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Área Administrativa</title>
+</head>
+<body>
+    <!-- Div para inserir o conteúdo do cabeçalho -->
+    <div id="headerContent"></div>
+
+    <!-- Conteúdo da Área Administrativa -->
+    <h1>Área Administrativa</h1>
+
+    <!-- Formulário de login -->
+    <form id="loginForm">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" value="admin@admin.com">
+        <br>
+        <label for="senha">Senha:</label>
+        <input type="password" id="senha" name="senha" value="1234">
+        <br>
+        <button type="button" onclick="realizarLogin()">Entrar</button>
+    </form>
+
+    <script src="../js/jquery-3.6.4.min.js"></script>   
+    <script src="../js/api.js"></script>
+    <script src="../js/scripts.js"></script>
+
+    <script>
+        // Chama a função para carregar o cabeçalho quando a página carregar
+        window.onload = function () {
+            loadHeader();
+        };
+
+        // Função para realizar o login
+        function realizarLogin() {
+            var email = document.getElementById("email").value;
+            var senha = document.getElementById("senha").value;
+
+            var dadosLogin = {
+                email: email,
+                senha: senha
+            };
+
+            var loginValido = validarUsuario(dadosLogin);
+
+            if (loginValido) {                
+                alert("Login realizado com sucesso!", "success");
+            } else {                
+                exibirMensagemFeedback("Login inválido. Por favor, tente novamente.");
+            }
+        }
+
+        // Função para exibir mensagens de feedback
+        function exibirMensagemFeedback(mensagem) {
+            var mensagemFeedback = document.getElementById("mensagemFeedback");
+            mensagemFeedback.innerHTML = mensagem;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,152 @@
+#apresentacao-trabalho h3{
+    text-align: justify;
+}
+
+#apresentacao-trabalho p{
+    color: white;
+    text-align: justify;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0 auto;
+    padding: 0;
+    box-sizing: border-box;
+    text-align: center;
+    background: #002a02;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #00923f, #000428);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #108812, #00280b); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    color: silver; 
+    max-width: 800px;
+    justify-content: center;   
+}
+
+.container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+}
+
+form {
+    margin-top: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;  
+    
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+}
+
+#loginForm {
+    background-color: #2f6c52;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    margin: 0 auto;
+}
+
+#loginForm label {
+    display: block;
+    margin-bottom: 8px;
+}
+
+#loginForm input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 16px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+#loginForm button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#loginForm button:hover {
+    background-color: #0056b3;
+}
+
+#contatoForm {
+    max-width: 400px;
+    margin: 0 auto;
+    background-color: #2f396c;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: justify;
+}
+
+#contatoForm label {
+    display: block;
+    margin-bottom: 8px;
+}
+
+#contatoForm input,
+#contatoForm textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 16px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+#contatoForm textarea {
+    resize: vertical; /* Permite redimensionar somente na direção vertical */
+}
+
+#contatoForm button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#contatoForm button:hover {
+    background-color: #0056b3;
+}
+
+/* Adicione este estilo ao seu arquivo styles.css ou dentro da tag <style> no head */
+#mensagensApi {
+    width: 100%;
+    margin-top: 20px;
+}
+
+#mensagensApi th,
+#mensagensApi td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+    max-width: 300px; 
+    word-wrap: break-word; 
+    overflow: hidden;
+    white-space: nowrap;
+}
+
